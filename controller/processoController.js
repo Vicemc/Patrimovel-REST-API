@@ -24,7 +24,7 @@ const addProcesso = async (req, res, next) => {
 const getProcessosAbertos = async (req , res, next)=>{
 
   const processos = await Processo.find()
-  var filtrado = processos.filter(function(obj) { return obj.patrimonios[0].statusPatrimonio == 0; });
+  var filtrado = processos.filter(function(obj) { return obj.patrimonios[0].statusPatrimonio == 1; });
   res.json(filtrado)
 
 }
