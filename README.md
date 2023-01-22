@@ -2,7 +2,9 @@
 
 ## Links importantes
     https://www.planttext.com
+    
     https://reqbin.com
+    
     https://cloud.mongodb.com/v2#/org/6399c2b670c1fb6044580891/
 
 ## Pendências
