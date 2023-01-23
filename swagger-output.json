@@ -1,0 +1,143 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Patrimóvel - REST API",
+    "description": "Projeto para a matéria de REST API",
+    "contact": {
+      "name": "Victor"
+    },
+    "version": "0.1"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000"
+    }
+  ],
+  "paths": {
+    "/api/v1/listaProcessosAbertos": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "http://localhost:5000"
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "http://localhost:5000"
+        }
+      ]
+    },
+    "/api/v1/novoProcesso": {
+      "post": {
+        "description": "Auto generated using Swagger Inspector",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/v1_novoProcesso_body"
+              },
+              "examples": {
+                "0": {
+                  "value": "{\n    \"idprocess\": 7,\n    \"idlocal\": \"Rio de Janeiro\",\n    \"dataabertura\": \"2022-05-01T00:00:00.000Z\",\n    \"statusverificacao\": {\n        \"numcorretos\": 10,\n        \"numrestantes\": 5,\n        \"numobservacao\": 3,\n        \"numincorretos\": 2\n    },\n    \"patrimonios\": [{\n        \"statusPatrimonio\": 0,\n        \"descricao\": \"Placa Mãe\"\n    }]\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "http://localhost:5000"
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "http://localhost:5000"
+        }
+      ]
+    }
+  },
+  "components": {
+    "schemas": {
+      "apiv1novoProcesso_statusverificacao": {
+        "type": "object",
+        "properties": {
+          "numincorretos": {
+            "type": "integer"
+          },
+          "numrestantes": {
+            "type": "integer"
+          },
+          "numobservacao": {
+            "type": "integer"
+          },
+          "numcorretos": {
+            "type": "integer"
+          }
+        }
+      },
+      "apiv1novoProcesso_patrimonios": {
+        "type": "object",
+        "properties": {
+          "statusPatrimonio": {
+            "type": "integer"
+          },
+          "descricao": {
+            "type": "string"
+          }
+        }
+      },
+      "v1_novoProcesso_body": {
+        "type": "object",
+        "properties": {
+          "idprocess": {
+            "type": "integer"
+          },
+          "statusverificacao": {
+            "$ref": "#/components/schemas/apiv1novoProcesso_statusverificacao"
+          },
+          "patrimonios": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/apiv1novoProcesso_patrimonios"
+            }
+          },
+          "dataabertura": {
+            "type": "string"
+          },
+          "idlocal": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

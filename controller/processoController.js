@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Processo = require("../models/Processo");
+const swaggerAutogen = require("swagger-autogen");
 
 
 const addProcesso = async (req, res, next) => {
@@ -15,7 +16,26 @@ const addProcesso = async (req, res, next) => {
 	})
 	await processo.save()
 	res.json(processo)
-  
+  /* #swagger.parameters["Processo"] = {
+        in: "body",
+        schema: {
+          $idprocess: "234,
+          $idLocal: "Teste",
+          $dataabertura: "2022-05-01T00:00:00.000Z",
+          $statusverificacao: {
+            $numcorretos: 10,
+            $numrestantes: 5,
+            $numobservacao: 3,
+            $numincorretos: 2
+          },
+          $patrimonios: [{
+            $statusPatrimonio: 0,
+            $descricao: "Placa Mãe Asus"
+          }]
+          
+        }
+
+} */
   } catch (error) {
     res.status(400).send(error.message);
   }
