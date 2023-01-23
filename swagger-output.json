@@ -16,10 +16,8 @@
   "paths": {
     "/api/v1/listaProcessosAbertos": {
       "get": {
-        "description": "Auto generated using Swagger Inspector",
         "responses": {
           "200": {
-            "description": "Auto generated using Swagger Inspector",
             "content": {
               "application/json; charset=utf-8": {
                 "schema": {
@@ -44,7 +42,6 @@
     },
     "/api/v1/novoProcesso": {
       "post": {
-        "description": "Auto generated using Swagger Inspector",
         "requestBody": {
           "content": {
             "application/json": {
@@ -61,7 +58,6 @@
         },
         "responses": {
           "200": {
-            "description": "Auto generated using Swagger Inspector",
             "content": {
               "application/json; charset=utf-8": {
                 "schema": {
