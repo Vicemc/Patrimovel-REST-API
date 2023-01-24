@@ -1,8 +1,12 @@
 const express = require("express");
+const swaggerUi = require("swagger-ui-express");
+const swaggerSpec = require("../swagger")
+
 const {
   addProcesso,
   getProcessosAbertos,
 } = require("../controller/processoController");
+const swaggerJSDoc = require("swagger-jsdoc");
 
 const router = express.Router();
 
