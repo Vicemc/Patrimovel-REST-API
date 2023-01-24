@@ -12,9 +12,9 @@ const addProcesso = async (req, res, next) => {
      *      content:
      *        application/json:
      *          schema:
-     *            $ref: '#/components/schemas/Processo'
+     *            $ref: 'components/schemas/Processo'
      *    responses:
-     *      201:
+     *      200:
      *        description: Processo adicionado com sucesso
      *      400:
      *        description: Erro na validação dos dados
