@@ -1,38 +1,33 @@
-# Patrimovel-REST-API
+# Patrimóvel API
 
-## Links importantes
-    https://www.planttext.com
-    
-    https://reqbin.com
-    
-    https://cloud.mongodb.com/v2#/org/6399c2b670c1fb6044580891/
+Este é um trabalho de API REST que fornece recursos para gerenciar processos de verificação de patrimônios.
 
-## Pendências
-  Eu tenho que implementar um GET e um POST. São eles:
+## Recursos
 
-  |  Método | Rota (subURL) | Request | Response
-| ------------- | ------------- | ------------- | ------------- |
-| GET  | /listaprocessosabertos  | idlocal | Ver abaixo
-| POST  | /novoprocesso  | /local | // patrimonios, data e id
+- Adicionar um novo processo
+- Listar processos abertos
 
-Response GET:
-```javascript
-{[
-    {
-       idprocess, // id do processo
-       idlocal, // id do local do patrimônio
-       dataabertura, // data de abertura do processo
-       statusverificacao : {
-           numcorretos,
-           numrestantes,
-           numobservacao,
-           numincorretos
-         }
-    }
-],[] }
-```
+## Tecnologias usadas
 
-### POST
-  - Criar, na pasta  Model, o processo
-  - Status de verificação
-  
+- Node.js
+- Express
+- MongoDB
+- Mongoose
+- OpenAPI
+- Swagger
+
+## Como usar
+
+1. Clone o repositório
+```git clone https://github.com/seu-usuario/patrimovel-api.git```
+2. Instale as dependências
+3. Inicie o servidor
+```npm start```
+ou
+```yarn start```
+
+4. Acesse a documentação da API em http://localhost:5000/api-docs.
+5. Utilize a documentação para testar as rotas.
+
+
+
